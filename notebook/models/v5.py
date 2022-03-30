@@ -31,6 +31,8 @@ def get_model(img_rows, img_cols,num_classes,x,y,x_valid=None,y_valid=None):
                   optimizer='adam',
                   metrics=['accuracy'])
 
+
+
     tf.function(_fit_eval(model, x, y, x_valid, y_valid), jit_compile=True, experimental_follow_type_hints=True)
 
     return model

@@ -7,7 +7,7 @@ from tensorflow.python import keras
 from tensorflow.python.keras.utils import np_utils
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense, Flatten, Conv2D, Dropout
-from models.v5 import get_model
+from models.v4 import get_model
 
 tf.config.optimizer.set_jit(True)
 
@@ -34,4 +34,4 @@ train_x, train_y = np.array(train_df.iloc[:, 1:]), np.array(train_df.iloc[:, 0])
 x_all, y_all = data_prep(train_df)
 x_train, x_valid, y_train, y_valid = train_test_split(x_all, y_all, test_size=0.2, random_state=13)
 
-get_model(img_rows, img_cols, num_classes, x_train, y_train, x_valid, y_valid)
+get_model(img_rows, img_cols, num_classes, x_train, y_train, x_valid, y_valid) 

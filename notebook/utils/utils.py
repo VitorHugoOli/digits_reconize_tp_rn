@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+#Executa as operações pesadas (fit)
 def _fit_eval(model, x, y, x_valid=None, y_valid=None, epochs=10, batch_size=128):
     
     model.fit(x, y,
